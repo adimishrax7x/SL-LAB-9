@@ -1,0 +1,63 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+     <mat-icon>menu</mat-icon>
+   </button>
+   <span>My Angular Calculator</span>
+   <span class="example-spacer"></span>
+   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+     <mat-icon>favorite</mat-icon>
+   </button>
+   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+ </mat-toolbar>
+
+
+<div class="button-row">
+    <a mat-raised-button color="primary" href="https://github.com/adimishrax7x" target="https://github.com/adimishrax7x"
+        class="button-row-2">
+        <i class="uil uil-github-alt"> GitHub</i>
+    </a>
+</div>
+
+
+<div ng-app="calculate">
+    <div ng-controller="MainCtrl" class="container">
+        <div class="shell">
+            <div class="screen">
+                <input type="text" name="Input" class="display" [value]="display">
+            </div>
+            <div class="numeric">
+                <button type="button" class="btn c-btn" (click)="Clear()">ON</button>
+                <button type="button" class="btn c-btn" (click)="Clear()">C</button>
+
+                <button type="button" class="btn1" (click)="Operator('/')">&divide;</button>
+                <button type="button" class="btn1" (click)="Operator('*')">&times;</button>
+
+                <button type="button" class="btn" (click)="Number(7)">7</button>
+                <button type="button" class="btn" (click)="Number(8)">8</button>
+                <button type="button" class="btn" (click)="Number(9)">9</button>
+
+                <button type="button" class="btn1" (click)="Operator('+')">&#43;</button>
+
+                <button type="button" class="btn" (click)="Number(4)">4</button>
+                <button type="button" class="btn" (click)="Number(5)">5</button>
+                <button type="button" class="btn" (click)="Number(6)">6</button>
+
+                <button type="button" class="btn1" (click)="Operator('-')">&#45;</button>
+
+                <button type="button" class="btn" (click)="Number(1)">1</button>
+                <button type="button" class="btn" (click)="Number(2)">2</button>
+                <button type="button" class="btn" (click)="Number(3)">3</button>
+
+                <button type=" button" class="btn-2" (click)="Number(0)" style="width: 68%;">0</button>
+
+                <button type="button" id="equals" class="btn-2 equal-btn" (click)="calculate()">=</button>
+
+                <button type="button" id="prime" class="btn-2 prime-btn" (click)="Operator('p')">Prime</button>
+
+                <button type="button" id="factorial" class="btn-2 fact-btn" (click)="Operator('!')">Factorial</button>
+            </div>
+        </div>
+    </div>
+</div>
